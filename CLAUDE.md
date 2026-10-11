@@ -31,7 +31,7 @@ Lingua del progetto: italiano (nomi nel gioco in `it_it.json` e `en_us.json`, id
 |---|---|---|---|
 | 0 | **Manuale** | braccia | metalli base, martello, piastre e polveri a mano |
 | 1 | **Fornaci** | carbone | altoforno (acciaio), forno a coke, prime leghe |
-| 2 | **Vapore e carbone** | combustione | frantumatore, pressa, fonderia di leghe a carbone |
+| 2 | **Vapore e carbone** | combustione | frantumatore, trinciatrice, modellatrice, fonderia di leghe a carbone |
 | 3 | **Elettrica** | energia (GE) | generatori, cavi, batterie, macchine elettriche |
 | 4 | **Industriale** | energia + fluidi | nastri, tubi, scavatrice, raffineria, plastica, upgrade |
 | 5 | **Automazione** | rete | magazzino digitale, autocrafting con schemi |
@@ -60,7 +60,7 @@ Più i minerali vanilla: ferro, rame, oro, carbone, redstone, lapislazzuli, diam
 
 ### 3.2 Forme di ogni metallo
 Per ogni metallo (nostro o vanilla): **grezzo, lingotto, pepita, polvere, polvere sporca, piastra,
-ingranaggio, bacchetta, filo, blocco, blocco grezzo**. Si generano tutte con lo stesso schema in codice
+ingranaggio, bacchetta, filo, trucioli, blocco, blocco grezzo**. Si generano tutte con lo stesso schema in codice
 (una lista di metalli → tutti gli oggetti, texture ricolorate, ricette e tag).
 
 ### 3.3 Leghe
@@ -97,7 +97,7 @@ ingranaggio, bacchetta, filo, blocco, blocco grezzo**. Si generano tutte con lo 
 | Oggetto | Era | Funzione |
 |---|---|---|
 | Martello da ingegnere | 0 | in crafting: lingotto → piastra, minerale → polvere; attiva i multiblocchi |
-| Tagliafili | 0 | in crafting: piastra → filo |
+| Tagliafili | 0 | ⚠️ da togliere nella tappa 5: i fili si faranno solo con la modellatrice |
 | Chiave inglese | 1 | ruota le macchine, configura i lati, le smonta senza perdere il contenuto |
 | Attrezzi in bronzo e acciaio | 1 | piccone, ascia, pala, spada, zappa |
 | Multimetro | 3 | mostra energia e stato di macchine e cavi |
@@ -121,8 +121,16 @@ consumo e numero di operazioni in parallelo. Le ricette di ogni macchina sono fi
 - **Fonderia di leghe** — 2-3 ingredienti → lega.
 
 ### Lavorazione dei pezzi
-- **Pressa** — lingotto → piastra / ingranaggio / bacchetta (con stampi).
-- **Trafila** — piastra → fili.
+- **Catena dei pezzi** (idea di Nilo): il metallo si cucina, si sminuzza e poi si modella in una macchina.
+  1. Minerale → fornace → **lingotto**.
+  2. **Trinciatrice** — lingotto → **trucioli** di metallo (1 lingotto = 1 trucioli).
+  3. **Modellatrice** — trucioli + **stampo** (piastra, ingranaggio, bacchetta, filo) → pezzo.
+     Esempi: 1 trucioli → 1 piastra; 4 trucioli → 1 ingranaggio; 1 trucioli → 2 bacchette; 1 trucioli → 3 fili.
+     Lo stampo non si consuma (si fa con piastre d'acciaio al banco).
+  - **Decisione (11/10/2026):** a mano restano solo piastre e polveri (martello), servono per costruire
+    le prime macchine. Ingranaggi, bacchette e fili si fanno **solo** con la modellatrice: le ricette a mano
+    attuali si tolgono nella tappa 5, quando arrivano le macchine.
+  - Entrambe nascono a carbone (era 2) e hanno poi la versione elettrica (era 3) e quella veloce/parallela.
 - **Assemblatore di circuiti** — componenti → circuiti.
 - **Centrifuga** — separa i sottoprodotti.
 - **Estrattore** — gomma dagli alberi, liquidi dagli oggetti.
@@ -180,9 +188,9 @@ consumo e numero di operazioni in parallelo. Le ricette di ogni macchina sono fi
 | 2 | Martello e tagliafili; piastre, ingranaggi, bacchette, fili; polveri; bronzo | 🧪 da provare in gioco |
 | 3 | Altri minerali: piombo, argento, nichel, bauxite | ⏳ prossima |
 | 4 | Forno a coke e altoforno multiblocco (acciaio vero) | ⏳ |
-| 5 | Prima macchina: frantumatore a carbone + classe macchina base | ⏳ |
+| 5 | Prime macchine a carbone: frantumatore, trinciatrice, modellatrice con stampi + classe macchina base | ⏳ |
 | 6 | Energia: generatore a combustione, cavi, batteria | ⏳ |
-| 7 | Macchine elettriche: fornace, pressa, fonderia di leghe | ⏳ |
+| 7 | Macchine elettriche: fornace, trinciatrice e modellatrice elettriche, fonderia di leghe | ⏳ |
 | 8 | Logistica: nastri e tubi | ⏳ |
 | 9 | Upgrade, scavatrice, automazione delle risorse | ⏳ |
 | 10 | Magazzino digitale e autocrafting | ⏳ |
