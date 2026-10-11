@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "ingredient": "gedaindustry:tin_dust",
+  "result": {
+    "id": "gedaindustry:tin_ingot"
+  },
+  "group": "tin_ingot"
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "gedaindustry:tin_ore",
+    "gedaindustry:deepslate_tin_ore",
+    "gedaindustry:tin_block",
+    "gedaindustry:raw_tin_block",
+    "gedaindustry:bronze_block",
+    "gedaindustry:steel_block"
+  ]
+}

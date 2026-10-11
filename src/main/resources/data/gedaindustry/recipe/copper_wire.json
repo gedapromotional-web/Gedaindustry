@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "gedaindustry:wire_cutters",
+    "gedaindustry:copper_plate"
+  ],
+  "result": {
+    "id": "gedaindustry:copper_wire",
+    "count": 2
+  }
+}

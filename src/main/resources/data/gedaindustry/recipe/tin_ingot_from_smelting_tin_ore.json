@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": "gedaindustry:tin_ore",
+  "result": {
+    "id": "gedaindustry:tin_ingot"
+  },
+  "group": "tin_ingot"
+}

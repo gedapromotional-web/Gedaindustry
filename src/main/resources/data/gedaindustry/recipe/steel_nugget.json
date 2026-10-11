@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "gedaindustry:steel_ingot"
+  ],
+  "result": {
+    "id": "gedaindustry:steel_nugget",
+    "count": 9
+  }
+}

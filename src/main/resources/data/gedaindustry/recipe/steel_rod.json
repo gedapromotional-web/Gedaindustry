@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "gedaindustry:steel_ingot"
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "gedaindustry:steel_rod",
+    "count": 4
+  }
+}

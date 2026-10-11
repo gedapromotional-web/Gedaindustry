@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "gedaindustry:copper_dust",
+    "gedaindustry:copper_dust",
+    "gedaindustry:copper_dust",
+    "gedaindustry:tin_dust"
+  ],
+  "result": {
+    "id": "gedaindustry:bronze_dust",
+    "count": 4
+  }
+}

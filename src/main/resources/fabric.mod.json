@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "gedaindustry",
+	"version": "${version}",
+	"name": "Geda Industry",
+	"description": "Mod tecnologica con metalli, macchine ed energia.",
+	"authors": [
+		"Nilo"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/gedaindustry/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.geda.gedaindustry.GedaIndustry"
+		],
+		"client": [
+			"com.geda.gedaindustry.client.GedaIndustryClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
